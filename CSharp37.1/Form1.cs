@@ -19,7 +19,6 @@ namespace CSharp37._1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             listBox1.Items.Clear();
 
             Random rnd = new Random();
@@ -28,12 +27,12 @@ namespace CSharp37._1
 
             for (int index = 0; index < 10; index++)
             {
-                number = -100 + rnd.Next(200);
+                number = -10 + rnd.Next(20);
                 listBox1.Items.Add(number);
             }
 
             for (int index = 0; index < 10; index++)
-                if ((int)listBox1.Items[index] >= 0)
+                if ((int)listBox1.Items[index] != 0)
                     count++;
 
             MessageBox.Show(count.ToString());
