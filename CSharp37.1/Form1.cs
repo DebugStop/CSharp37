@@ -23,7 +23,6 @@ namespace CSharp37._1
 
             Random rnd = new Random();
             int number;
-            int sum = 0;
 
             for (int index = 0; index < 10; index++)
             {
@@ -33,11 +32,12 @@ namespace CSharp37._1
 
             for (int index = 0; index < 10; index++)
             {
-                if ((int)listBox1.Items[index] < 21)
-                    sum += (int)listBox1.Items[index];
+                if ((int)listBox1.Items[index] % 5 == 0)
+                {
+                    MessageBox.Show(index.ToString());
+                    listBox1.Items[index] = (int)listBox1.Items[index] + 1;
+                }
             }
-
-            MessageBox.Show(sum.ToString());
         }
     }
 }
