@@ -23,19 +23,17 @@ namespace CSharp37._1
 
             Random rnd = new Random();
             int number;
-            int count = 0;
 
             for (int index = 0; index < 10; index++)
             {
-                number = -100 + rnd.Next(200);
+                number = -10 + rnd.Next(20);
                 listBox1.Items.Add(number);
             }
 
-            for (int index = 0; index < 9; index++)
-                if (((int)listBox1.Items[index] < (int)listBox1.Items[1]) && ((int)listBox1.Items[index] > (int)listBox1.Items[9]))
-                    count++;
+            for (int index = 0; index < 10; index++)
+                if (((int)listBox1.Items[index] == Math.Abs((int)listBox1.Items[2])) && (index != 2))
+                    MessageBox.Show(listBox1.Items[index].ToString());
 
-            MessageBox.Show(count.ToString());
         }
     }
 }
