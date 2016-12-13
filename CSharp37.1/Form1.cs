@@ -32,7 +32,7 @@ namespace CSharp37._1
             }
 
             for (int index = 0; index < 10; index++)
-                if ((int)listBox1.Items[index] != 0)
+                if ((int)listBox1.Items[index] % 3 == 0)
                     count++;
 
             MessageBox.Show(count.ToString());
