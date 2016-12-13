@@ -19,6 +19,7 @@ namespace CSharp37._1
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             listBox1.Items.Clear();
 
             Random rnd = new Random();
@@ -31,11 +32,9 @@ namespace CSharp37._1
                 listBox1.Items.Add(number);
             }
 
-            for (int index = 0; index < 9; index++)
-            {
-                if ((int)listBox1.Items[index] * (int)listBox1.Items[index + 1] < 0)
+            for (int index = 0; index < 10; index++)
+                if ((int)listBox1.Items[index] >= 0)
                     count++;
-            }
 
             MessageBox.Show(count.ToString());
         }
