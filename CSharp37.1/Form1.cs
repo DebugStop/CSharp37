@@ -23,6 +23,7 @@ namespace CSharp37._1
 
             Random rnd = new Random();
             int number;
+            int count = 0;
 
             for (int index = 0; index < 10; index++)
             {
@@ -31,9 +32,10 @@ namespace CSharp37._1
             }
 
             for (int index = 0; index < 10; index++)
-                if (((int)listBox1.Items[index] == Math.Abs((int)listBox1.Items[2])) && (index != 2))
-                    MessageBox.Show(listBox1.Items[index].ToString());
+                if ((int)listBox1.Items[index] != 0)
+                    count++;
 
+            MessageBox.Show(count.ToString());
         }
     }
 }
