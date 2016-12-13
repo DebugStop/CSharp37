@@ -42,4 +42,3 @@ namespace CSharp37._1
         }
     }
 }
-
